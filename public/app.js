@@ -1,7 +1,7 @@
 document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Previne o envio do formulário imediatamente
+    event.preventDefault(); // Previne o envio do formulário
     let isValid = true; // Para acompanhar se o formulário é válido
-    let errorMessages = []; // Armazena mensagens de erro
+    let errorMessages = []; // Para armazenar mensagens de erro
 
     // Validação do nome
     const nome = document.getElementById('nome').value;
@@ -65,11 +65,11 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         errorMessages.push("Data de nascimento inválida");
     }
 
-    // Se alguma validação falhar, mostrar os alertas
+    // Exibe mensagens de erro ou envia o formulário
     if (!isValid) {
         alert(errorMessages.join("\n")); // Exibe todas as mensagens de erro
     } else {
-        // Se tudo estiver válido, pode enviar o formulário
+        alert("Formulário enviado com sucesso!"); // Adicione este alert para teste
         this.submit(); // Envia o formulário
     }
 });
