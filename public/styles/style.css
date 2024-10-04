@@ -1,0 +1,142 @@
+:root {
+    --color-white: #fff;
+    --color-pastel-purple: #c5a3ff;
+    --color-pastel-pink: #ffc0cb;
+    --color-shock-pink: #ff69b4;
+    --color-red: #e63636;
+    --color-dark1: #f0f0f0;
+    --color-dark2: #faf5ff;
+    --color-input-bg: #f7f3ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark1);
+    background-image: url('https://i.pinimg.com/564x/48/6e/a0/486ea052aa08114de8f3fe6fa825b708.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-shock-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+.content {
+    background-color: var(--color-dark2);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--color-pastel-purple);
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 1rem;
+    color: var(--color-red);
+}
+
+label {
+    color: var(--color-shock-pink);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.span-require {
+    color: var(--color-red);
+    display: none; /* Pode ser exibido via JS ao validar os campos */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inputs {
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color-input-bg);
+    border: 2px solid var(--color-input-bg);
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.inputs:focus {
+    border-color: var(--color-pastel-purple);
+}
+
+button {
+    padding: 12px;
+    outline: none;
+    border: 2px solid var(--color-pastel-pink);
+    background-color: var(--color-pastel-pink);
+    color: var(--color-dark2);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-pastel-purple);
+    border-color: var(--color-pastel-purple);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.selecter {
+    margin-top: 1rem;
+}
+
+.select, .turno, .atividades {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+input[type="number"] {
+    padding: 10px;
+    background-color: var(--color-input-bg);
+    border: 2px solid var(--color-input-bg);
+    border-radius: 5px;
+    width: 100px; /* Definindo largura para campos de número menores */
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: var(--color-pastel-purple);
+}
+
+div > input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
